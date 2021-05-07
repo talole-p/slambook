@@ -87,7 +87,7 @@ app.set("view engine","ejs")
 app.set("views", staticpathview)
 hbs.registerPartials(staticpathpartial)
 
-app.get("/registration",(req,res)=>{
+app.get("/",(req,res)=>{
     res.render("registration");
 
 })
