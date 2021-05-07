@@ -175,7 +175,7 @@ app.get("/page",(req,res,next)=>{
     datashow.exec(function(err,data){
         if(err) throw err;
     res.render("page",{records:data});
-    
+ 
     
 });
 });
