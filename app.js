@@ -87,7 +87,7 @@ app.set("view engine","ejs")
 app.set("views", staticpathview)
 hbs.registerPartials(staticpathpartial)
 
-app.get("/registration",(req,res)=>{
+app.get("/",(req,res)=>{
     res.render("registration");
 
 })
@@ -132,7 +132,7 @@ app.post("/registration",async(req,res)=>{
     }
 });
 
-app.get("/form",isAuth,auth,(req,res)=>{
+app.get("/form",auth,(req,res)=>{
     res.render("form");
     console.log(req.session);
     req.session.isAuth= true;
