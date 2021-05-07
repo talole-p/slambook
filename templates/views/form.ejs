@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>slambook</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="css/form.css"/>
+	<link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+	<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+</head>
+<body>
+		<form action="/form" method="POST" enctype="multipart/form-data">
+					<div class="styled-input wide">
+ 			 <label for="exampleFormControlInput1" id="form-label" >Name</label>
+ 			 <input type="text" name="fullname" id="" placeholder="plz enter your full name" required> 
+			  	<br> <br>
+				<div>
+					<img id="blah" alt="" width="100" height="100" />
+					<input type="file" name="image"enctype="multipart/form-data"
+   					 onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
+				
+</div>
+				<br> <br>
+			  <label for="exampleFormControlInput1" id="form-label">your Nickname</label>
+ 			 <input type="text" name="nickname" id="" placeholder="plz enter your Nickname" required>
+			  	<br> <br>
+		
+			  <label for="exampleFormControlInput1" id="form-label" required >enter your birthdate</label>
+			  <input type="date" name="Birthdate" id="">
+				  <br> <br>
+			  <label for="exampleFormControlInput1" id="bbb">Email</label>
+ 			 <input type="text" name="email" id="" placeholder="email" required>
+			  	<br> <br>
+				  		<label for="exampleFormControlInput1" id="form-label">City</label>
+ 			 				<input type="text" name="city"  id="" placeholder="city" required>
+			  					<br> <br>
+				  			<label for="exampleFormControlInput1" id="form-label">Your Favorite Song</label>
+ 			 			<input type="text"  name="song" id="" placeholder="Your Favorite Song" required>
+			  		<br> <br>
+				<label for="exampleFormControlInput1" id="form-label">Your Favorite Movie</label>
+ 			 <input type="text" name="movie" id="" placeholder="Your Favorite Movie" required>
+		<br> <br>
+	<label for="exampleFormControlInput1" id="form-label">Your Favorite Actress</label>
+<input type="text" name="actress"  id="" placeholder="Your Favorite Actress" required>
+	<br> <br>
+		<label for="exampleFormControlInput1" id="form-label">Your Favorite Actor</label>
+ 			<input type="text" name="actor"  id="" placeholder="Your Favorite Actor" required>
+				<br> <br>
+				  <label for="exampleFormControlInput1" id="form-label">Your Favorite food</label>
+ 			 		<input type="text" name="food" id="" placeholder="Your Favorite food" required>
+			  			<br> <br>
+				  			<label for="exampleFormControlInput1" id="form-label">Your Favorite Fruit</label>
+ 			 			<input type="text" name="fruit" id="" placeholder="Your Favorite fruit" required>
+			  		<br> <br>
+				<label for="exampleFormControlInput1" id="form-label">A which Gift  You like Most</label>
+ 			 <input type="text"  name="gift" id="" placeholder=" A which gift you like most" required>
+		<br> <br>
+		<label for="exampleFormControlTextarea1" class="form-label">Any Advice For me</label>
+  		<input type="text" name="advice" id="exampleFormControlTextarea1"></input>
+				<br><br>  		
+				<label for="exampleFormControlTextarea1" class="form-label">Feedback regarding This Slambook</label>
+  						<textarea class="form-control" name="feedback" id="exampleFormControlTextarea1"></textarea>	
+		
+			<button type="submit" class="submit"> submit</button>
+			<button type="reset" class="reset">reset</button>
+			</div>  
+		</form>
+</body>
