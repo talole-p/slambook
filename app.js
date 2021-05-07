@@ -39,7 +39,7 @@ const isAuth= (req,res,next)=>{
     if (req.session.isAuth){
         next()
     }else{
-        res.redirect("registration");
+        res.redirect("/");
     }
 
 }
@@ -116,7 +116,7 @@ app.post("/registration",async(req,res)=>{
         // set the cookis
 
             res.cookie("jwt",token,{
-                expires:new Date(Date.now()+300000)
+                expires:new Date(Date.now()+60000)
             });
 
 
@@ -132,7 +132,7 @@ app.post("/registration",async(req,res)=>{
     }
 });
 
-app.get("/form",auth,(req,res)=>{
+app.get("/form",isAuth,auth,(req,res)=>{
     res.render("form");
     console.log(req.session);
     req.session.isAuth= true;
@@ -162,13 +162,17 @@ app.post("/form",upload, async(req,res,next)=>{
         feedback:req.body.feedback
     })
     const userform= await userinfo.save();
-    res.status(200).render("form");
+    res.status(200).render("thanks");
     
         
     } catch (error) {
         res.status(400).send(error)
     }
 });
+
+app.get("/thanks",(req,res)=>{
+    res.render("thanks")
+})
 
 app.get("/page",(req,res,next)=>{
    // console.log(data)
